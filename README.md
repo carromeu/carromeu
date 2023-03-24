@@ -7,11 +7,11 @@ Empresa Brasileira de Pesquisa Agropecuária (Embrapa)
 ```
 
 <div align="center">
-  <a href="https://github.com/carromeu">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=carromeu&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=carromeu&layout=compact&langs_count=7&theme=dark"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=carromeu&show_icons=true&theme=dark&include_all_commits=true&count_private=true" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=carromeu&layout=compact&langs_count=7&theme=dark" />
 </div>
-  
+
+<!--
 <div style="display: inline_block" align="center"><br>
 <h2 align="center"> Tecnologias </h2>
   <img align="center" alt="Icon-React" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
@@ -22,15 +22,11 @@ Empresa Brasileira de Pesquisa Agropecuária (Embrapa)
   <img align="center" alt="Icon-SASS" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
   <img align="center" alt="Icon-StyledComponents" height="50" width="50" src="https://styled-components.com/atom.png" />
 </div>
+-->
   
-##
-  
-<div style="display: inline_block" align="center"> 
-  <a href="https://instagram.com/floorskn" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
- 	<a href="https://www.twitch.tv/florskn" target="_blank"><img src="https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white" target="_blank"></a>
-  <a href = "mailto://davi.galdino08@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-  <a href="https://www.linkedin.com/in/davi-galdino-b9232b237/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-  
+<div style="display: inline_block" align="center">
+  <a href="https://instagram.com/carromeu" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/camilo-carromeu" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 </div>
 
 <!--
