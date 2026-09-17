@@ -18,6 +18,15 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
+      - name: Diagnóstico do token (escopos e alcance, sem expor o valor)
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          echo "tipo: $([ -n "${{ secrets.METRICS_TOKEN }}" ] && echo METRICS_TOKEN || echo GITHUB_TOKEN)"
+          echo "escopos (vazio = token fine-grained ou GITHUB_TOKEN): $(gh api -i user 2>/dev/null | grep -i '^x-oauth-scopes' || echo 'n/d')"
+          echo "usuário: $(gh api user --jq .login 2>/dev/null || echo 'n/d')"
+          echo "repositórios visíveis (owner+collaborator+organization_member): $(gh api 'user/repos?affiliation=owner,collaborator,organization_member&per_page=100' --paginate --jq 'length' 2>/dev/null | paste -sd+ - | bc)"
+          echo "organizações visíveis: $(gh api user/orgs --jq '.[].login' 2>/dev/null | paste -sd, -)"
       - name: Métricas gerais (commits, repositórios, estrelas, linguagens)
         uses: lowlighter/metrics@latest
         with:
