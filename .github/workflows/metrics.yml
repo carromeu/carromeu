@@ -50,6 +50,9 @@ jobs:
           plugin_languages_details: percentage
           plugin_languages_limit: 8
           plugin_languages_ignored: html, css, scss
+          # a análise em profundidade de ~200 repositórios estourava o limite padrão de 15 min (resultado parcial)
+          plugin_languages_analysis_timeout: 45
+          plugin_languages_analysis_timeout_repositories: 10
           plugins_errors_fatal: no
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
