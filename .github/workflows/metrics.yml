@@ -52,7 +52,8 @@ jobs:
           plugin_languages_ignored: html, css, scss
           # a análise em profundidade clona e varre cada repositório; limites no máximo permitido pelo metrics
           plugin_languages_analysis_timeout: 60
-          plugin_languages_analysis_timeout_repositories: 15
+          plugin_languages_analysis_timeout_repositories: 0 # sem limite por repositório (o limite de 15 min por repositório gerava resultado parcial)
+          debug: yes # temporário: identificar repositórios lentos na análise
           # repositórios pesados de dados, imagens e forks de terceiros, que não representam código meu
           plugin_languages_skipped: >-
             maykon1313/Embrapa, carromeu/awesome-idea-of-the-day-archive, carromeu/house,
