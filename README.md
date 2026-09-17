@@ -1,6 +1,7 @@
 ## Camilo Carromeu
 
 [Analista de Tecnologia da Informação](https://www.embrapa.br/equipe/-/empregado/354215/camilo-carromeu) na [Embrapa Gado de Corte](https://www.embrapa.br/gado-de-corte)
+
 Doutor em Ciência da Computação · Líder técnico do [Embrapa I/O](https://embrapa.io).
 
 Engenharia de software para a pecuária digital: plataformas de desenvolvimento e DevOps, IoT, aplicativos de apoio à decisão e IA generativa aplicada ao agro. Mais em [carromeu.com](https://carromeu.com).
