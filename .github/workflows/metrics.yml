@@ -50,9 +50,15 @@ jobs:
           plugin_languages_details: percentage
           plugin_languages_limit: 8
           plugin_languages_ignored: html, css, scss
-          # a análise em profundidade de ~200 repositórios estourava o limite padrão de 15 min (resultado parcial)
-          plugin_languages_analysis_timeout: 45
-          plugin_languages_analysis_timeout_repositories: 10
+          # a análise em profundidade clona e varre cada repositório; limites no máximo permitido pelo metrics
+          plugin_languages_analysis_timeout: 60
+          plugin_languages_analysis_timeout_repositories: 15
+          # repositórios pesados de dados, imagens e forks de terceiros, que não representam código meu
+          plugin_languages_skipped: >-
+            maykon1313/Embrapa, carromeu/awesome-idea-of-the-day-archive, carromeu/house,
+            carromeu/obsidian-embrapa, liafacom/fauna_flora, liafacom/fauna_flora_bento,
+            liafacom/fauna_flora_api, liafacom/deformconv, liafacom/eliton, liafacom/text_dataset,
+            liafacom/mlm_finetuning, embrapa-io/site, smartsolos/mobile
           plugins_errors_fatal: no
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
