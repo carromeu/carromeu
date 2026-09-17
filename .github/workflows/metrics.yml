@@ -1,0 +1,45 @@
+# Gera as métricas do perfil com lowlighter/metrics (GitHub Action) e commita o SVG neste repositório.
+# Diferente do github-readme-stats público (instância na Vercel, hoje em 503), não depende de serviço externo
+# e soma contribuições em repositórios de organizações (embrapa-io etc.), não só nos repositórios próprios.
+name: Métricas do perfil
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # todo dia às 03:00 em Campo Grande
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/metrics.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Métricas gerais (commits, repositórios, estrelas, linguagens)
+        uses: lowlighter/metrics@latest
+        with:
+          # METRICS_TOKEN: token pessoal (classic) com read:user, read:org e public_repo.
+          # Sem ele, cai no GITHUB_TOKEN, que cobre menos dados.
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          user: carromeu
+          filename: github-metrics.svg
+          template: classic
+          config_timezone: America/Campo_Grande
+          config_display: large
+          base: header, activity, community, repositories, metadata
+          base_indepth: yes
+          # conta repositórios próprios, em que colaboro e das organizações de que sou membro
+          repositories_affiliations: owner, collaborator, organization_member
+          commits_authoring: carromeu, camilo.carromeu@embrapa.br, camilo@carromeu.com
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_details: percentage
+          plugin_languages_limit: 8
+          plugin_languages_ignored: html, css, scss
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
